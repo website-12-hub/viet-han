@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="vi" class="overflow-x-hidden">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cơ Khí Việt Hàn - Sửa Chữa Máy Móc Chuyên Nghiệp</title>
+
+  <meta name="description"
+    content="Cơ Khí Việt Hàn chuyên sửa chữa, bảo trì máy móc công nghiệp, gia công cơ khí chính xác. Đội ngũ kỹ thuật tay nghề cao, dịch vụ nhanh chóng - giá hợp lý. Liên hệ ngay!" />
+  <meta name="keywords"
+    content="sửa chữa máy móc, cơ khí Việt Hàn, bảo trì máy móc, gia công cơ khí, cơ khí công nghiệp, sửa máy công nghiệp, cơ khí uy tín, cơ khí TP.HCM" />
+
+  <link rel="icon" href="https://res.cloudinary.com/div27nz1j/image/upload/v1744200096/dnlwjye6uzniunn4c9wg.png"
+    type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              light: "#3b82f6",
+              DEFAULT: "#1d4ed8",
+              dark: "#1e40af",
+            },
+            secondary: {
+              light: "#e11d48",
+              DEFAULT: "#be123c",
+              dark: "#9f1239",
+            },
+            accent: {
+              light: "#fbbf24",
+              DEFAULT: "#f59e0b",
+              dark: "#d97706",
+            },
+            dark: "#0f172a",
+            light: "#f8fafc",
+          },
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+          },
+          boxShadow: {
+            custom:
+              "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+            "custom-lg":
+              "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    }
+
+    .gradient-overlay {
+      background: linear-gradient(to right,
+          rgba(15, 23, 42, 0.9),
+          rgba(15, 23, 42, 0.7));
+    }
+
+    .text-shadow {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-card {
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .service-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .service-card img {
+      transition: transform 0.5s ease;
+    }
+
+    .btn-primary {
+      background-color: #1d4ed8;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary:hover {
+      background-color: #1e40af;
+    }
+
+    .btn-primary::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.5s ease;
+    }
+
+    .btn-primary:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      border: 2px solid white;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: white;
+      color: #1d4ed8;
+    }
+
+    .counter-box {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .counter-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.05);
+      transform: skewX(-15deg);
+      z-index: -1;
+    }
+
+    .testimonial-card {
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: scale(1.03);
+    }
+
+    .social-icon {
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-5px);
+    }
+
+    .custom-shape-divider {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .custom-shape-divider svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 70px;
+    }
+
+    .custom-shape-divider .shape-fill {
+      fill: #ffffff;
+    }
+
+    .check-mark-list li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+    }
+
+    .check-mark-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #1d4ed8;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 overflow-x-hidden">
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+    <div class="animate-spin rounded-full h-32 w-32 border-t-4 border-b-4 border-primary"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-40 transition-all duration-300" id="navbar">
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-3">
+          <div class="flex items-center">
+            <img src="https://res.cloudinary.com/div27nz1j/image/upload/v1744200096/dnlwjye6uzniunn4c9wg.png" alt=""
+              class="h-16 w-auto" />
+          </div>
+          <div>
+            <span class="text-xl font-bold text-dark block">CÔNG TY TNHH SỬA CHỮA</span>
+            <span class="text-xl font-bold text-primary block">MÁY MÓC VIỆT HÀN</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex space-x-10">
+          <a href="#home" class="text-gray-700 hover:text-primary font-medium transition relative nav-link">Trang
+            Chủ</a>
+          <a href="#about" class="text-gray-700 hover:text-primary font-medium transition relative nav-link">Giới
+            Thiệu</a>
+          <a href="#services" class="text-gray-700 hover:text-primary font-medium transition relative nav-link">Dịch
+            Vụ</a>
+          <a href="#products" class="text-gray-700 hover:text-primary font-medium transition relative nav-link">Sản
+            Phẩm</a>
+          <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition relative nav-link">Liên
+            Hệ</a>
+        </div>
+        <div class="hidden lg:flex items-center space-x-4">
+          <a href="tel:+84937349787" class="flex items-center text-gray-700 hover:text-primary transition">
+            <i class="fas fa-phone-alt mr-2"></i>
+            <span>0937 349 787</span>
+          </a>
+          <a href="tel:+84889113677" class="flex items-center text-gray-700 hover:text-primary transition">
+            <i class="fas fa-phone-alt mr-2"></i>
+            <span>0889 113 677</span>
+          </a>
+          <a href="#contact"
+            class="bg-primary hover:bg-primary-dark text-white font-medium py-2 px-6 rounded-full transition duration-300 transform hover:scale-105 shadow-md">
+            Liên Hệ Ngay
+          </a>
+        </div>
+        <div class="lg:hidden">
+          <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden bg-white shadow-lg absolute w-full left-0 top-full z-20 hidden">
+      <div class="container mx-auto py-4">
+        <div class="flex flex-col space-y-4">
+          <a href="#home" class="text-gray-700 hover:text-primary font-medium py-2 transition">Trang Chủ</a>
+          <a href="#about" class="text-gray-700 hover:text-primary font-medium py-2 transition">Giới Thiệu</a>
+          <a href="#services" class="text-gray-700 hover:text-primary font-medium py-2 transition">Dịch Vụ</a>
+          <a href="#products" class="text-gray-700 hover:text-primary font-medium py-2 transition">Sản Phẩm</a>
+          <a href="#contact" class="text-gray-700 hover:text-primary font-medium py-2 transition">Liên Hệ</a>
+          <div class="pt-4 border-t border-gray-200">
+            <a href="tel:+84937349787" class="flex items-center text-gray-700 hover:text-primary transition py-2">
+              <i class="fas fa-phone-alt mr-2"></i>
+              <span>0937 349 787</span>
+            </a>
+            <a href="tel:+84889113677" class="flex items-center text-gray-700 hover:text-primary transition py-2">
+              <i class="fas fa-phone-alt mr-2"></i>
+              <span>0889 113 677</span>
+            </a>
+            <a href="#contact"
+              class="bg-primary hover:bg-primary-dark text-white font-medium py-2 px-6 rounded-full transition duration-300 mt-4 inline-block">
+              Liên Hệ Ngay
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="./Images/banner.jpg" alt="Cơ khí Việt Hàn" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 gradient-overlay"></div>
+    </div>
+    <div class="container mx-auto relative z-10">
+      <div class="max-w-3xl" data-aos="fade-right" data-aos-duration="1000">
+        <h5 class="text-accent font-bold mb-4 text-lg md:text-xl tracking-wider">
+          CÔNG TY TNHH SỬA CHỮA MÁY MÓC VIỆT HÀN
+        </h5>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white text-shadow leading-tight">
+          Cơ khí Việt Hàn <span class="text-accent">Tiện Phay, Mài Hàn</span>
+        </h1>
+        <p class="text-xl mb-8 text-gray-200">
+          Với đội ngũ nhân viên nhiệt tình, giàu kinh nghiệm, chúng tôi luôn
+          cố gắng đem đến cho khách hàng trải nghiệm tốt nhất.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="tel:+84937349787"
+            class="btn-primary text-white font-bold py-3 px-8 rounded-full shadow-lg inline-block relative overflow-hidden">
+            <span class="relative z-10">Gọi Ngay: 0937 349 787</span>
+          </a>
+          <a href="tel:+84889113677"
+            class="btn-primary text-white font-bold py-3 px-8 rounded-full shadow-lg inline-block relative overflow-hidden">
+            <span class="relative z-10">0889 113 677</span>
+          </a>
+          <a href="#services" class="btn-secondary text-white font-bold py-3 px-8 rounded-full shadow-lg inline-block">
+            Xem Dịch Vụ
+          </a>
+        </div>
+        <div class="mt-12 bg-white/10 backdrop-blur-sm p-4 rounded-lg inline-block">
+          <p class="text-white font-medium">
+            Địa chỉ: 446 Đường DT 748, Tổ 9, Ấp Bến Liễu, Xã Phú An, Thị xã
+            Bến Cát, Tỉnh Bình Dương
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-custom p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-primary-light/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-tools text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Đội Ngũ Chuyên Nghiệp</h3>
+          <p class="text-gray-600">
+            Đội ngũ nhân viên nhiệt tình, giàu kinh nghiệm, luôn sẵn sàng phục
+            vụ và đáp ứng mọi yêu cầu của khách hàng.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-custom p-8 card-hover" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-primary-light/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-cogs text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Dịch Vụ Đa Dạng</h3>
+          <p class="text-gray-600">
+            Cung cấp đa dạng các dịch vụ cơ khí từ mài trục, tiện, phay, hàn
+            đến chế tạo và sửa chữa các loại trục.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-custom p-8 card-hover" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-primary-light/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-map-marker-alt text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Khu Vực Bến Cát</h3>
+          <p class="text-gray-600">
+            Chuyên phục vụ các doanh nghiệp và khách hàng tại khu vực Bến Cát,
+            Bình Dương và các vùng lân cận.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="relative" data-aos="fade-right">
+          <img src="./Images/co-khi.png" alt="Cơ khí Việt Hàn"
+            class="rounded-2xl shadow-custom-lg w-full h-auto z-10 relative" />
+          <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg w-48 md:w-64 z-20">
+            <div class="flex items-center justify-center">
+              <div class="text-center">
+                <span class="text-4xl font-bold text-primary block">10+</span>
+                <span class="text-gray-600">Năm Kinh Nghiệm</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -top-6 -left-6 bg-primary p-6 rounded-xl shadow-lg w-48 md:w-64 z-20">
+            <div class="flex items-center justify-center">
+              <div class="text-center">
+                <span class="text-4xl font-bold text-white block">100+</span>
+                <span class="text-gray-200">Khách Hàng Hài Lòng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <div class="mb-6">
+            <h5 class="text-primary font-bold mb-2 text-lg tracking-wider">
+              VỀ CHÚNG TÔI
+            </h5>
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">
+              Công Ty TNHH Sửa Chữa Máy Móc Việt Hàn
+            </h2>
+            <div class="w-20 h-1.5 bg-accent mb-8"></div>
+          </div>
+
+          <p class="text-gray-600 mb-6 text-lg">
+            Công ty TNHH Sửa Chữa Máy Móc Việt Hàn chuyên cung cấp các dịch vụ
+            cơ khí chất lượng cao tại khu vực Bến Cát, Bình Dương. Với đội ngũ
+            nhân viên nhiệt tình, giàu kinh nghiệm, chúng tôi luôn cố gắng đem
+            đến cho khách hàng trải nghiệm tốt nhất.
+          </p>
+
+          <p class="text-gray-600 mb-8 text-lg">
+            Chúng tôi tự hào là đối tác tin cậy của nhiều doanh nghiệp trong
+            việc cung cấp các dịch vụ mài trục, tiện, phay, hàn và chế tạo các
+            loại trục với chất lượng cao và giá cả hợp lý.
+          </p>
+
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 bg-primary-light/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-check text-primary text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Chất Lượng Cao</h4>
+                <p class="text-gray-600">
+                  Cam kết chất lượng dịch vụ tốt nhất
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 bg-primary-light/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-check text-primary text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Giá Cả Hợp Lý</h4>
+                <p class="text-gray-600">Báo giá minh bạch, cạnh tranh</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 bg-primary-light/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-check text-primary text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Đội Ngũ Chuyên Nghiệp</h4>
+                <p class="text-gray-600">
+                  Nhân viên giàu kinh nghiệm, tận tâm
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 bg-primary-light/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-check text-primary text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Hỗ Trợ 24/7</h4>
+                <p class="text-gray-600">Luôn sẵn sàng phục vụ mọi lúc</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="#services"
+              class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+              Dịch Vụ Của Chúng Tôi
+            </a>
+            <a href="tel:+84937349787"
+              class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+              <i class="fas fa-phone-alt mr-2"></i> 0937 349 787
+            </a>
+            <a href="tel:+84889113677"
+              class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+              <i class="fas fa-phone-alt mr-2"></i> 0889 113 677
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-white">
+    <div class="container mx-auto">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h5 class="text-primary font-bold mb-2 text-lg tracking-wider">
+          DỊCH VỤ CỦA CHÚNG TÔI
+        </h5>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+          Dịch Vụ Cơ Khí Chuyên Nghiệp
+        </h2>
+        <div class="w-24 h-1.5 bg-accent mx-auto mb-8"></div>
+        <p class="max-w-3xl mx-auto text-gray-600 text-lg">
+          Chúng tôi cung cấp đa dạng các dịch vụ cơ khí chất lượng cao, đáp
+          ứng mọi nhu cầu của khách hàng tại khu vực Bến Cát.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative overflow-hidden h-64">
+            <img src="./Images/truc/mai-truc-1.jpg" alt="Mài trục, mài dao bàm, dao lanh"
+              class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Mài Trục, Mài Dao
+                </h3>
+                <div class="w-12 h-1 bg-accent mb-3"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <p class="text-gray-600 mb-6">
+              Dịch vụ mài trục, mài dao bàm, dao lanh với độ chính xác cao,
+              đảm bảo chất lượng và độ bền cho các thiết bị của khách hàng.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Mài trục các loại</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Mài dao bàm chuyên dụng</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Mài dao lanh chính xác</span>
+              </li>
+            </ul>
+            <a href="tel:+84937349787"
+              class="text-primary font-semibold hover:text-primary-dark transition flex items-center">
+              Liên Hệ Ngay
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative overflow-hidden h-64">
+            <img src="./Images/vit/vit-2.jpg" alt="Tiện, phay, hàn, mài" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Tiện, Phay, Hàn, Mài
+                </h3>
+                <div class="w-12 h-1 bg-accent mb-3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-6">
+              Dịch vụ tiện, phay, hàn, mài chuyên nghiệp với máy móc hiện đại,
+              đảm bảo độ chính xác và chất lượng cao cho mọi sản phẩm.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Tiện các chi tiết máy</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Phay chính xác</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Hàn các loại vật liệu</span>
+              </li>
+            </ul>
+            <a href="tel:+84937349787"
+              class="text-primary font-semibold hover:text-primary-dark transition flex items-center">
+              Liên Hệ Ngay
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+          <div class="relative overflow-hidden h-64">
+            <img src="./Images/truc/trucchoi-1.jpg" alt="Chế tạo các loại trục" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Chế Tạo Các Loại Trục
+                </h3>
+                <div class="w-12 h-1 bg-accent mb-3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-6">
+              Dịch vụ chế tạo các loại trục: trục cao su, trục crome, trục
+              chổi, trục nam châm, trục chống đỉnh với độ chính xác cao.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Trục cao su chất lượng cao</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Trục crome bền bỉ</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Trục nam châm chuyên dụng</span>
+              </li>
+            </ul>
+            <a href="tel:+84937349787"
+              class="text-primary font-semibold hover:text-primary-dark transition flex items-center">
+              Liên Hệ Ngay
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+          <div class="relative overflow-hidden h-64">
+            <img src="./Images/vit/vit-4.jpg" alt="Sửa chữa và thay thế cột trục" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Sửa Chữa Và Thay Thế Cột Trục
+                </h3>
+                <div class="w-12 h-1 bg-accent mb-3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-6">
+              Dịch vụ sửa chữa và thay thế cột trục chuyên nghiệp, nhanh
+              chóng, giúp khôi phục hoạt động của máy móc, thiết bị.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Sửa chữa cột trục bị hỏng</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Thay thế cột trục mới</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Bảo dưỡng định kỳ</span>
+              </li>
+            </ul>
+            <a href="tel:+84937349787"
+              class="text-primary font-semibold hover:text-primary-dark transition flex items-center">
+              Liên Hệ Ngay
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+          <div class="relative overflow-hidden h-64">
+            <img src="./Images/vit/han-1.jpg" alt="Gia công các loại" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Gia Công Các Loại
+                </h3>
+                <div class="w-12 h-1 bg-accent mb-3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-6">
+              Dịch vụ gia công các loại, vít tải, bồn khuấy, kệ, xe đẩy các
+              loại theo yêu cầu của khách hàng với chất lượng cao.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Vít tải công nghiệp</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Bồn khuấy các loại</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Kệ, xe đẩy công nghiệp</span>
+              </li>
+            </ul>
+            <a href="tel:+84937349787"
+              class="text-primary font-semibold hover:text-primary-dark transition flex items-center">
+              Liên Hệ Ngay
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+          <div class="relative overflow-hidden h-64">
+            <img src="./Images/dao/dao-3.jpg" alt="Dịch vụ khác" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Dịch Vụ Khác
+                </h3>
+                <div class="w-12 h-1 bg-accent mb-3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-6">
+              Ngoài các dịch vụ trên, chúng tôi còn cung cấp nhiều dịch vụ cơ
+              khí khác theo yêu cầu của khách hàng.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Tư vấn kỹ thuật</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Bảo trì máy móc</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Thiết kế kỹ thuật</span>
+              </li>
+            </ul>
+            <a href="tel:+84937349787"
+              class="text-primary font-semibold hover:text-primary-dark transition flex items-center">
+              Liên Hệ Ngay
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12" data-aos="fade-up">
+        <a href="tel:+84937349787"
+          class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-flex items-center">
+          <span>Gọi Ngay: 0937 349 787</span>
+          <i class="fas fa-phone-alt ml-2"></i>
+        </a>
+        <a href="tel:+84889113677"
+          class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-flex items-center">
+          <span>0889 113 677</span>
+          <i class="fas fa-phone-alt ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-20 bg-gray-50">
+    <div class="container mx-auto">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h5 class="text-primary font-bold mb-2 text-lg tracking-wider">
+          SẢN PHẨM CỦA CHÚNG TÔI
+        </h5>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+          Sản Phẩm Cơ Khí Chất Lượng Cao
+        </h2>
+        <div class="w-24 h-1.5 bg-accent mx-auto mb-8"></div>
+        <p class="max-w-3xl mx-auto text-gray-600 text-lg">
+          Chúng tôi sản xuất và cung cấp các sản phẩm cơ khí chất lượng cao,
+          đáp ứng nhu cầu đa dạng của khách hàng.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl p-6 text-center transition-all hover:shadow-lg transform hover:scale-105"
+          data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-primary-light/10 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden">
+            <img src="./Images/truc/caosu-3.jpg" alt="Trục cao su" class="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 class="font-bold text-lg mb-3">Trục Cao Su</h3>
+          <p class="text-gray-600 text-sm">
+            Trục cao su chất lượng cao, độ bền cao
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center transition-all hover:shadow-lg transform hover:scale-105"
+          data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="bg-primary-light/10 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="Trục crome" class="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 class="font-bold text-lg mb-3">Trục Crome</h3>
+          <p class="text-gray-600 text-sm">
+            Trục crome chống ăn mòn, độ bền cao
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center transition-all hover:shadow-lg transform hover:scale-105"
+          data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="bg-primary-light/10 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden">
+            <img src="./Images/truc/trucchoi-1.jpg" alt="Trục chổi" class="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 class="font-bold text-lg mb-3">Trục Chổi</h3>
+          <p class="text-gray-600 text-sm">
+            Trục chổi chuyên dụng cho các máy công nghiệp
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center transition-all hover:shadow-lg transform hover:scale-105"
+          data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="bg-primary-light/10 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden">
+            <img
+              src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUTEhMSFRUVEhcVFxUTFhUYFhYVFRUWFhUVGRgYHSggGRolGxYVITEmJSkrLi4uFx8zODMsNyktLisBCgoKDg0OFhAQFy0dHh0rLS0tLSstLi0tLS0tLS0tLSsrLSstLTcrLS0tLSstLS03Ky0rLS0rLS0rKy0tKy0tN//AABEIAOAA4AMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABgEDBAUHAgj/xABEEAACAQIDBQQGBggFBAMAAAABAgADEQQSIQUGMUFREyJhcQcygZGhsUJSYsHR8BQzcpKissLhI3OCk/FTY4PSFiRD/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EAB0RAQEBAAMBAAMAAAAAAAAAAAABEQIhMRIDQWH/2gAMAwEAAhEDEQA/AO4xEQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERARExtp4rsqNSra+RGa3C+UE2gZMTnrb7Vyw1pIvMdkxb9/tLD90y7/APJKr8K3uCj42++XKmp7EgH6dUY96rUt4En4XnupSwxIZhULjg5Clh5X/tJelTyJCRtB0/V1qvgGA+8kfCX6W81Qet2bfA/A/dLgl8SK0t96VyKlNkt9LNTIPxB+ElFNwwBGoIBHkeEg9REQEREBERAREQEREBERAREQEREBERATTb4vbB1vEKv7zqD85uZHt+2/+qR9aog9xzf0yz0cyMtN1l9klvJOjJTxTjmfbz++arYO1anZXGRSWNyqhb+wafCbOuLKT4H5SO7F/Ur7fmYVuam0ap4ufZYfKWHrseLMfMk/OWotKi6rTvGyzejS/wApP5ROBidx3fx9J6NJVqIWFJAVBFwQovpxmOaxtYiJhSIiAiIgIiICInmo9gT0geomCcceQFut76jQzAq7WqAm6FQDYG62It63O2vXpA3soWA4mRxsfUP0vjLfbNzPvlwSNsSg+kPZrLbY1fEyOUGKCyk8SbMS2pNzqfGXqmIY2ysqEA3zKXUnS3Agjn75m7P1pcjcNj+i+8y02OfwHkPxmqqbQCW7YFL8HW70m8mAuD4ETJRgRcEEHmNRM8fycauLr4l/rH5fKaTeSialPLmKkMGuLE6X+sCOc2xmNiad50iIDVw9RfquPDut8bg+8SwayjRroft6D2N6p9hkvxGDExTgb6AX8Br8JvURbaWlKoelNz7lJmh2NSPYp5H+Yyf19zWqIypSqIGUqbHILMCD3X7vPpMrZW4q06ao9T1Rb17kf7ar842CELhm6e/SVp4Ut6ve/YBf+UGdMobs4ZeRY9Qqg+97tNgmCpDhTB/bZn+BNo+jHLaexKraBG165R8L5vhJBW3fxCJm7Msqrclbd0AakhrH3Xk5RyBZbKOiKFHwEwtrMexqsSTak51JPBD1ktpiG4PeavStlrEj6rd8eWvD2ESf7rbZOKol2UKyuUNuBsFa/h63wnH6YnSPRq3+FVH/AHAfetv6Y5ToTGIiYUiIgIiICWsUbIx42BOnhrLswsbjVXu2zEg6C2nmSdOMDkXoux1V8bXzMctSi1Urm0zmqney9bM2sllbffCJi6mDrFqToyKrPbs6hemrhQ1+4e9bvWHDXW01Wy9h4fC1mqYdcS1TI1MZg7IFJUkZmUA+qupPKa3end41an6RVw+cVCiFgLV6b2CqSoOV10FrWPDvDhLbNXHQq+DHLT5TCrHswS9lAFyxIAAHMk8PhLW+m1nwuEavRKlldAQwJFi+VgbWI6ctZXdbbtLH4ZaxUIczI9P9ZZl6aDQgq3DTN4RvSLqvf5jofdy8ZcSkx4j2W+8zZIqDgrfwqPhcz1n6Ko87t8zLtTGAuGbXKSCemv439syqOEewvcm2rMAt/E8JdNVvrH2WHyngjrr5xbt2kknivYDm6+y7fKOyT7Z9wH4yoE9WkHgIg4U0/wBV2+c99q3AGw6KAPlKQBCvJF+OvnrK5Z6tEo8xPVoIgeDNdvC1sLWP/aYfvDL982dppN8quXCVPtFV/iB+6BzmnxnRPRshy1jY5SUAPIkBrj2XX3zntCkDxnUPR+tsM3+c38qD7peXiJNERMKREQE0+I2/TD9mCt721YXPiBe9pscdUy03YakITYceE57tGu1MikCo17zsCVzaEkjoTfXW3QiFiVY7bopkh3VCOI08/lIrtfeDCGxz3ZTcZSRYjmCDofETWb/4btMKKt8tWgQpF9WQmxpnxViCPAta/Gc1Fz1kzR1HeXeV6VOnXoEPRqd3NpmRxxRgOfEi3Q+F7u7e+YqrkrAA3uh8ehJ4X6zndHE1UoVUIJpuoJB5MpBDDxBAmqqGoBwNiLjQ2IPAjqI+da11b0hY9DgGZGB7VkFtdcrBifAgIVN/C9rTQ+h7FuKtaiykK1qq6cwrI+viOy/dkIp7TaoppOx1YspJ0FQ+sh6Z7X8G8CTOmbjYlFqUUrUalHEvTKgVEqLnRABmGca2VUGntlnUxmuhiVlYlRSJWVtCKCVgCVgUtFpWIUi0RCEREK82kZ3/AHthlHWsvwVz90k5kR9IlT/Dor1qMf3Vt/VLPREcLOp7j07YRT9ZnP8AEV+6cswz6Tre6ZU4Sjl+pr+1mOb+K8vJI28xcZtGjSIFSoiFvVDEXa3Gw4mZU5hvPiA2KOIqsMlNQKQA4FSScx5nvXHmbDmcyaqV4/fXC0794sfCwH4/CWtgb84XE1DSzCnU+iGYWfwU6Xbw6a9bfOe2drtVq1GoqyozEqrcQDraw4C97C+gtLOCatdXGYMNbi/dP42mvmJr6m3mpF8O9MMV7QZCy3BVW9Yhh6py3seRIkFrPUpUWLU7orM3rlrWOZlGZVbW5tp9XkZGcBtDa+JpLbOQBYnqQOOp5ix9sw94dj7Qo4apXrkmkMvaKWLGxYAMAOjFDp0HSYbnTD3j2sc701e6Oiop+ibDNTcg/SsaYB5ZT10n+6W5OGrYejiNSKtNamU/RLC7J5g3HsnE9o1OIH/5kW1DXtxsRoRfNY9LSebk+kD9Gwgw7XJSoxS3/Tezi5P2i/wi/wAHX6e7WFVcppqQRYg8wdCDNHuK1NcNWwtUAtgsTUw12sS1IHPQb/bdR/pMguM9KNYkhFA8SSZDcRvDiDXrVFd17fIXyEi7IpUHzteMo128xticWtQsAalQgIARmBPZ3BI7tjy4Xvrax7HQwKjFYKoM7N2zAvUqVKj5Ww1YkZqjE2uAbeAnF9oYWpU75zEsCCTcnwuZ3LZzXbBN9pD78NUH3xUTW0ASoiVkiJWBSVi0QpKSsQikSuWVt+f+fwhXmAJ6/PWDA8kfnj/b4yFekgi1Dzq8f/Hyk2kD9Jd89AWNstQ+GpT/ANZZ6iM0GuNeXLgPhO07Fw3Z0KSc1pqD52u3xvOO7v4btK9KnyaqoP7N7t8AZ2+ORCcD3sxlRqlfZ7ajs61SkLAMK1LEYipoTqVampB46qOpnfJyDfjdqo21aVWmVUCpTqm4JzJVK0aoFumQ/wC9fTjEHHtlY5VZi4DArpfqP7H4TLrbbP0QB5Szjdnqjup0Cuyj/SSLTFTs8wUC5I4+U2JluzvdjlpmnRAy3vmt9I+tc9bZR5ATNxb4/EgpWrEIwyso4EHQggcZg7kK+dlp0mqsVNlUE63XWw8pMcfhMbTW70lp3W6qblmAIBsqBjpcXJAAvrMX1qVCqW7C6gtxc0eBuCAO/wDEHzvPWwtzGxKdyoitTYq5a/BWdNAOOqSUYHAZKvZkqbs1W41uFCUrnocyMD+zMz0fWK1W5M9Q+ztqxHzmLa0xsD6PaCfrKjVD9kZR982Cbu4VKyAUFIyPo12uwykE36DN75IKldV1uJpqu1qXbL3gAquWPuUfOTbUV25h1FI2VVFgLKABx8Jd2a2mDP2qH8SZf6pG9496KTkU6bX5+dtfum92Y96WEP28J8alJfvhXQBEoDPVvz/abc1JURb8/n8JWFUErb8/nSVMqIHn8/n/AJlRPZmo27tX9FUVHR2pnS6KWN/ZoPaRA2kqLRs5qVamtVHzowuCNB4jqCDoRMxVUcAB4/3gYVSkxBy8RyOk1ux9rpVqNRqJVo1BeyVVAzgcSjAkN5cba9bbbHZXQqHdb/SpmzDXkZh0aAVQrM1TK2YNVIZlIsRY2HC0DZ5FXgPz5zUbWwdOvdalmU8uPtHQ+28zRRZuvtl1MEOZ90g1O7m6lDDEVFzO+pVnt3Q3IAaXsbX8+F7SRSii0rATS7y7LaqqvS/W075dbXVhZl6HTrpN1ED5x3l3ddatTtKZ1djrfQsb8vMTzsvcPGVR/h4dgDzK5F95sDPotsMhbMUUsBYMVGa2ul+PM++XZr6TEP8ARrukcBQcVMprVahZiNcqgBVTNzGhbzYyQ7Z2YlemVZQTxUnqCGtca5SVFxzmfEyrk2LwOVai0gRWFIUQKhJKBBkXXn9I3+kSb87YWzqyYPDhbg8QpGnd5c9Rx158ec6dtrd6liDmNg1rXyggjxBmnqej7D1GDYh6tW2mUHs0/h738UYuuT7Y3r5LNBjNoVMuWx7SprkAJYUxrqOOpyn2T6Nw26eBprlTC0VHUKMx839Y+0y5jN3cO9JqS00phr601Cm5+kbcT+eOsGvmCngq4zVGRlyozAsNbgHkdbXt7Lzp2zscP0LBtcKzNhioJ17tamxAHOwHwkf27sats+oaVfM6u5anUYkhksvdDXvpbgdRm58TEdh7UqJjE71w1VUYEA93MAAOltLWjDX1CPz+RKiWULHgpPjwHvMvJhmPEgeWvxlR6ImFtHHLRGZyAvNiQAPMnQTZ9gLW4+c0+2qla3ZphUrUynez1FUE3N0IPDkb68YGXs6qtdBUpurIb2IN+BseEz0wq87n8+E0OxNkJhKjmiSKVQXNHUhXFrMp8rg9dOk274k+XlAyyqgcgPdNPiqNY1cy4i1O4vS7JGBAtmXMdTfXXleZi0mbkfMy/TwnU+6QYOEoJSLdkoQOcxUcM1rFgOAJFr+QmQtJm6+2ZqUgOAnuBiphOp90vpSA4Ce4gIiICIiAiIgIiICIiAiIgIiIGFtnZNHFUmo10Do3I8QeTKRqrDkRPn3fH0f1dnVxVuamGLd2rbVWPBagGim50PAnhbgPo+WsTh0qIyVFV0YFWVgCrA8QQeIgQX0ebzdrRFKqxL01GVj9JLhQD1IJA8bjneS5sWOh+Q/GRfZO5BweKZ8Oc2HemwyMe/TYshABPrLodTqPHjJPT2aT6zW8F/E/hKLbYsnw8pSnTdtQD5n+82NLCovADzOpl6QYdPBfWPumQlFRwEuRAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQERED//2Q=="
+              alt="Trục nam châm" class="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 class="font-bold text-lg mb-3">Trục Nam Châm</h3>
+          <p class="text-gray-600 text-sm">
+            Trục nam châm chất lượng cao, từ tính mạnh
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center transition-all hover:shadow-lg transform hover:scale-105"
+          data-aos="fade-up" data-aos-delay="500">
+          <div
+            class="bg-primary-light/10 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="Trục chống đỉnh" class="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 class="font-bold text-lg mb-3">Trục Chống Đỉnh</h3>
+          <p class="text-gray-600 text-sm">
+            Trục chống đỉnh chịu lực tốt, độ bền cao
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center transition-all hover:shadow-lg transform hover:scale-105"
+          data-aos="fade-up" data-aos-delay="600">
+          <div
+            class="bg-primary-light/10 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="Vít tải" class="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 class="font-bold text-lg mb-3">Vít Tải</h3>
+          <p class="text-gray-600 text-sm">
+            Vít tải công nghiệp các loại theo yêu cầu
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center transition-all hover:shadow-lg transform hover:scale-105"
+          data-aos="fade-up" data-aos-delay="700">
+          <div
+            class="bg-primary-light/10 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="Bồn khuấy" class="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 class="font-bold text-lg mb-3">Bồn Khuấy</h3>
+          <p class="text-gray-600 text-sm">Bồn khuấy công nghiệp các loại</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center transition-all hover:shadow-lg transform hover:scale-105"
+          data-aos="fade-up" data-aos-delay="800">
+          <div
+            class="bg-primary-light/10 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden">
+            <img src="./Images/vit/han-2.jpg" alt="Kệ, xe đẩy" class="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 class="font-bold text-lg mb-3">Kệ, Xe Đẩy</h3>
+          <p class="text-gray-600 text-sm">
+            Kệ, xe đẩy công nghiệp theo yêu cầu
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12" data-aos="fade-up">
+        <a href="tel:+84937349787"
+          class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-flex items-center">
+          <span>Liên Hệ Đặt Hàng</span>
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-blue-700 to-blue-600 text-white relative overflow-hidden">
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Left Side -->
+        <div data-aos="fade-right">
+          <h5 class="text-yellow-400 font-semibold mb-3 text-lg tracking-wide uppercase">
+            Liên Hệ Ngay
+          </h5>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            Bạn Cần Dịch Vụ Cơ Khí Chất Lượng Cao?
+          </h2>
+          <p class="text-lg text-gray-100 mb-10">
+            Liên hệ với chúng tôi ngay hôm nay để được tư vấn và báo giá miễn
+            phí cho các dịch vụ cơ khí tại khu vực Bến Cát.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="tel:+84937349787"
+              class="flex items-center gap-2 bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-6 rounded-full transition shadow-lg">
+              <i class="fas fa-phone-alt"></i> 0937 349 787
+            </a>
+            <a href="tel:+84889113677"
+              class="flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:text-blue-700 font-bold py-3 px-6 rounded-full transition shadow-lg">
+              <i class="fas fa-phone-alt"></i> 0889 113 677
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="relative" data-aos="fade-left">
+          <img src="./Images/vit/vit-5.jpg" alt="Dịch vụ cơ khí Việt Hàn"
+            class="rounded-xl shadow-2xl w-full object-cover" />
+
+          <!-- Hộp hỗ trợ -->
+          <div class="absolute -bottom-6 left-6 bg-white text-black p-5 rounded-xl shadow-xl w-[260px]">
+            <div class="flex items-center">
+              <div class="bg-green-500 text-white rounded-full p-3 mr-4">
+                <i class="fas fa-headset text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-base">Hỗ Trợ 24/7</h4>
+                <p class="text-gray-600 text-sm">Luôn sẵn sàng phục vụ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Icon background -->
+    <div class="absolute -bottom-12 -right-12 opacity-10">
+      <i class="fas fa-cogs text-[200px] text-white"></i>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="container mx-auto">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h5 class="text-primary font-bold mb-2 text-lg tracking-wider">
+          LIÊN HỆ
+        </h5>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+          Liên Hệ Với Chúng Tôi
+        </h2>
+        <div class="w-24 h-1.5 bg-accent mx-auto mb-8"></div>
+        <p class="max-w-3xl mx-auto text-gray-600 text-lg">
+          Liên hệ với chúng tôi để được tư vấn và báo giá cho các dịch vụ cơ
+          khí tại khu vực Bến Cát.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div data-aos="fade-right">
+          <form id="contact-form" class="bg-white p-8 rounded-xl shadow-lg">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="name" class="block text-gray-700 font-medium mb-2">Họ Tên</label>
+                <input type="text" id="name" name="Họ Tên"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                  required />
+              </div>
+              <div>
+                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                <input type="email" id="email" name="Email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                  required />
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="phone" class="block text-gray-700 font-medium mb-2">Số Điện Thoại</label>
+                <input type="tel" id="phone" name="Số Điện Thoại"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                  required />
+              </div>
+              <div>
+                <label for="subject" class="block text-gray-700 font-medium mb-2">Dịch Vụ Quan Tâm</label>
+                <select id="subject" name="Dịch Vụ Quan Tâm"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                  required>
+                  <option value="">Chọn dịch vụ</option>
+                  <option value="mai-truc">Mài trục, mài dao</option>
+                  <option value="tien-phay">Tiện, phay, hàn, mài</option>
+                  <option value="che-tao-truc">Chế tạo các loại trục</option>
+                  <option value="sua-chua">Sửa chữa và thay thế cột trục</option>
+                  <option value="gia-cong">Gia công các loại</option>
+                  <option value="khac">Dịch vụ khác</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label for="message" class="block text-gray-700 font-medium mb-2">Nội Dung</label>
+              <textarea id="message" name="Nội Dung" rows="5"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                required></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+              Gửi Tin Nhắn
+            </button>
+
+            <p id="form-message" class="mt-4 text-green-600 font-semibold hidden">✔️ Gửi thành công! Cảm ơn bạn.</p>
+          </form>
+
+          <script>
+            const form = document.getElementById('contact-form');
+            const message = document.getElementById('form-message');
+
+            form.addEventListener('submit', async function (e) {
+              e.preventDefault();
+
+              const formData = new FormData(form);
+
+              try {
+                const res = await fetch("https://formsubmit.co/ajax/info@viethan.com.vn", {
+                  method: "POST",
+                  headers: {
+                    'Accept': 'application/json'
+                  },
+                  body: formData
+                });
+
+                if (res.ok) {
+                  form.reset();
+                  message.classList.remove("hidden");
+                } else {
+                  alert("Đã xảy ra lỗi khi gửi. Vui lòng thử lại.");
+                }
+              } catch (err) {
+                alert("Không thể gửi. Vui lòng kiểm tra kết nối mạng.");
+              }
+            });
+          </script>
+
+        </div>
+
+        <div data-aos="fade-left">
+          <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-primary mb-6">
+              Thông Tin Liên Hệ
+            </h3>
+
+            <div class="flex items-start mb-6">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-white text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Địa Chỉ</h4>
+                <p class="text-gray-600">
+                  446 đường DT 748, tổ 9, ấp Bến Liễu, xã Phú An, thị xã Bến
+                  Cát, tỉnh Bình Dương
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start mb-6">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-phone text-white text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Điện Thoại</h4>
+                <p class="text-gray-600">0937 349 787 (Mr. Tuyến)</p>
+                <p class="text-gray-600">0889 113 677</p>
+              </div>
+            </div>
+
+            <div class="flex items-start mb-6">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-envelope text-white text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Email</h4>
+                <p class="text-gray-600">info@viethan.com.vn</p>
+                <p class="text-gray-600">tuyen@viethan.com.vn</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-clock text-white text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Giờ Làm Việc</h4>
+                <p class="text-gray-600">Thứ Hai - Thứ Bảy: 7:30 - 17:30</p>
+                <p class="text-gray-600">Chủ Nhật: Theo lịch hẹn</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-bold text-primary mb-6">
+              Dịch Vụ Của Chúng Tôi
+            </h3>
+            <ul class="check-mark-list list-disc list-inside text-gray-700 space-y-2 list-none">
+              <li>Mài trục, mài dao băm, dao lanh</li>
+              <li>Tiện, phay, hàn, mài</li>
+              <li>
+                Chế tạo các loại trục: trục cao su, trục chrome, trục hàn, mài
+              </li>
+              <li>
+                Chế tạo các loại trục: trục cao su, trục chrome, trục chổi,
+                trục nam châm, trục chống đỉnh
+              </li>
+              <li>Sửa chữa và thay thế cốt trục</li>
+              <li>
+                Gia công các loại: vít tải, bồn khuấy, kệ, xe đẩy các loại
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="h-96 bg-gray-300 relative">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3915.6575427016583!2d106.584400175046!3d11.064281489102507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDAzJzUxLjQiTiAxMDbCsDM1JzEzLjEiRQ!5e0!3m2!1svi!2s!4v1744632897125!5m2!1svi!2s"
+      class="absolute top-0 left-0 w-full h-full" style="border: 0" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-16 pb-8">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="flex items-center space-x-2 mb-6">
+            <img src="https://res.cloudinary.com/div27nz1j/image/upload/v1744200096/dnlwjye6uzniunn4c9wg.png"
+              class="w-20" alt="" />
+            <span class="text-xl font-bold">VIỆT HÀN</span>
+          </div>
+          <p class="text-gray-400 mb-6">
+            Công ty TNHH Sửa Chữa Máy Móc Việt Hàn chuyên cung cấp các dịch vụ
+            cơ khí chất lượng cao tại khu vực Bến Cát, Bình Dương.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition social-icon">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold mb-6">Liên Kết Nhanh</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="#home" class="text-gray-400 hover:text-white transition">Trang Chủ</a>
+            </li>
+            <li>
+              <a href="#about" class="text-gray-400 hover:text-white transition">Giới Thiệu</a>
+            </li>
+            <li>
+              <a href="#services" class="text-gray-400 hover:text-white transition">Dịch Vụ</a>
+            </li>
+            <li>
+              <a href="#products" class="text-gray-400 hover:text-white transition">Sản Phẩm</a>
+            </li>
+            <li>
+              <a href="#contact" class="text-gray-400 hover:text-white transition">Liên Hệ</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold mb-6">Dịch Vụ Của Chúng Tôi</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">Mài trục, mài dao</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">Tiện, phay, hàn, mài</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">Chế tạo các loại trục</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">Sửa chữa và thay thế cột trục</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition">Gia công các loại</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold mb-6">Thông Tin Liên Hệ</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <i class="fas fa-map-marker-alt text-primary mr-3"></i>
+              <span class="text-gray-400">446 Đường DT 748, Tổ 9, Ấp Bến Liễu, Xã Phú An, Thị xã Bến
+                Cát, Tỉnh Bình Dương</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt text-primary mr-3"></i>
+              <span class="text-gray-400">0937 349 787 (Mr. Tuyến)</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt text-primary mr-3"></i>
+              <span class="text-gray-400">0889 113 677</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope text-primary mr-3"></i>
+              <span class="text-gray-400">info@viethan.com.vn</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-500 text-sm mb-4 md:mb-0">
+            &copy; 2023 Công Ty TNHH Sửa Chữa Máy Móc Việt Hàn. Tất cả các
+            quyền được bảo lưu.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition">Chính Sách Bảo Mật</a>
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition">Điều Khoản Sử Dụng</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Preloader Script -->
+  <script>
+    window.addEventListener("load", function () {
+      const preloader = document.getElementById("preloader");
+      preloader.style.opacity = "0";
+      setTimeout(function () {
+        preloader.style.display = "none";
+      }, 500);
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Sticky Navbar
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("py-2");
+        navbar.classList.remove("py-4");
+      } else {
+        navbar.classList.add("py-4");
+        navbar.classList.remove("py-2");
+      }
+    });
+
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: "smooth",
+          });
+
+          // Close mobile menu if open
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        }
+      });
+    });
+
+    // Active link highlighting
+    const sections = document.querySelectorAll("section[id]");
+
+    window.addEventListener("scroll", function () {
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.classList.remove("text-primary");
+        link.classList.add("text-gray-700");
+
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.remove("text-gray-700");
+          link.classList.add("text-primary");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
